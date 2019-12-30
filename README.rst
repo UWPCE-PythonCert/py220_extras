@@ -3,14 +3,7 @@ uw_py220_extras
 ===============
 
 
-Add a short description here!
-
-
-Description
-===========
-
-A longer description of your project goes here...
-
+Additional material for classes and assignments.
 
 Note
 ====
