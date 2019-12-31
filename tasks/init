@@ -1,0 +1,15 @@
+#!/bin/sh
+
+structure $project
+  window editor
+    vsplit
+      pane right
+        run "conda activate $PWD/.venv_uw_py220_extras && vim"
+      pane left
+        hsplit
+          run "conda activate $PWD/.venv_uw_py220_extras && git status"
+      pane down
+          run "conda activate $PWD/.venv_uw_py220_extras && python"
+
+focus editor
+connect $project
