@@ -24,17 +24,21 @@ class is very relevant to this.
    the product name and quantity.
 
 So, If the input is:
-[
-('Chair', 'A', 10),
-('Bed', 'A', 12),
-('Chair', 'S', 6)
-]
+
+   [
+      ('Chair', 'A', 10),
+      ('Bed', 'A', 12),
+      ('Chair', 'S', 6)
+   ]
+
 
 The output will be:
-[
-('Chair', 4),
-('Bed', 12)
-]
+
+   [
+      ('Chair', 4),
+      ('Bed', 12)
+   ]
+
 
 ## Notes
 1. Order does not matter in the output tuple.
