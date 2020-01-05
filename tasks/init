@@ -4,12 +4,12 @@ structure $project
   window editor
     vsplit
       pane right
-        run "conda activate $PWD/.venv_uw_py220_extras && vim"
+        run "conda activate uw_py220_extras && vim"
       pane left
         hsplit
-          run "conda activate $PWD/.venv_uw_py220_extras && git status"
+          run "conda activate uw_py220_extras && git status"
       pane down
-          run "conda activate $PWD/.venv_uw_py220_extras && python"
+          run "conda activate uw_py220_extras && python"
 
 focus editor
 connect $project
