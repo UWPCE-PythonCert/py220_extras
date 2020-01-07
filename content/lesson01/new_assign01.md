@@ -25,7 +25,7 @@ class is very relevant to this.
 
 So, If the input is:
 
-`
+```
 
    [
       ('Chair', 'A', 10),
@@ -33,18 +33,18 @@ So, If the input is:
       ('Chair', 'S', 6)
    ]
 
-`
+```
 
 The output will be:
 
-`
+```
 
    [
       ('Chair', 4),
       ('Bed', 12)
    ]
 
-`
+```
 
 ## Notes
 1. Order does not matter in the output tuple.
