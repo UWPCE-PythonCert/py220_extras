@@ -23,7 +23,7 @@ class is very relevant to this.
 1. There will be exactly one record in output for each input product, showing
    the product name and quantity.
 
-So, If the input is:
+So, if the input is:
 
 ```
 
@@ -47,7 +47,7 @@ The output will be:
 ```
 
 ## Notes
-1. Order does not matter in the output tuple.
+1. Order does not matter in the output list.
 1. You should have at least 20 input records, with a mix of As and Ss.
 1. You should include tests to make sure that the program behaves correctly.
    Pay special attention to potential errors in input data, and any functions
