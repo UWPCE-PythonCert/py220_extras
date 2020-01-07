@@ -3,7 +3,7 @@
 
 We will discuss and explain the assignment completion and submission process during lesson 1.
 
-Here is a quick summary of how it works.
+## Setup steps
 
 The files you need for the assignments in Canvas are obtained by cloning this repo:
 https://github.com/UWPCE-PythonCert-ClassRepos/py220_assignments
