@@ -46,6 +46,7 @@ The output will be:
 1. You should include tests to make sure that the program behaves correctly.
    Pay special attention to potential errors in input data, and any functions
    you will write.
+1. Be sure to lint your code and resolve at least 80% of the issues
 
 ## Submission
 1. use a zip tool to submit a .zip file to Canvas that contains the contents of
