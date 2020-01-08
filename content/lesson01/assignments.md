@@ -37,8 +37,8 @@ Then:
 
 or on Windows
 
-`venv\bin\activate`
-`venv\bin\deactivate`
+`venv\scripts\activate`
+`venv\scripts\deactivate`
 
 2: pytest and coverage
 
