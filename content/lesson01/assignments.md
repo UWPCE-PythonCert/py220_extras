@@ -30,8 +30,6 @@ Then:
 
 `python -m venv venv`
 
-`python setup.py develop`
-
 `source venv/bin/activate`
 `source venv/bin/deactivate`
 
@@ -39,6 +37,10 @@ or on Windows
 
 `venv\scripts\activate`
 `venv\scripts\deactivate`
+
+
+`python setup.py develop`
+
 
 2: pytest and coverage
 
