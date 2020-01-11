@@ -2,8 +2,8 @@ from uw_py220_extras.lesson01 import math
 
 
 def test_addit():
-    total = math.addit(1, 2)
-    assert total == 3
+    total = math.addit("c", "a")
+    assert total == "ca" 
 
 
 def test_subit():
