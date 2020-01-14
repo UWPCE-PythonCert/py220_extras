@@ -1,5 +1,5 @@
-import pytest
-import user_info
+
+from uw_py220_extras.lesson01 import user_info
 from unittest.mock import Mock, patch
 
 
@@ -11,6 +11,6 @@ def test_get_user_info_older():
 
 
 def test_get_user_year_younger():
-    user_info.input = Mock(return_value = "1979")
+    user_info.input = Mock(return_value="1979")
     expected_output = "You were born on 2 ABY"
     assert user_info.get_user_year() == expected_output

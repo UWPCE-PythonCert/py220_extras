@@ -19,4 +19,3 @@ def get_user_info():
         return(f"{name} was born on {abs(star_wars_age)} BBY")
     if star_wars_age == 0:
         return(f"{name} was born on the same year as the Battle of Yavin")
-
