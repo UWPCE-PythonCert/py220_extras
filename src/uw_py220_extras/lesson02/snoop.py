@@ -15,4 +15,3 @@ def not_worried_about_this():
 if __name__ == "__main__":
     not_worried_about_this()
     myfunc()
-

@@ -3,7 +3,6 @@
 
 class Pet:
     """ This class defines Pet, which is an animal kept by a human for domestic purposes" """
-
     def __init__(self, name):
         self.name = name
         self.hello = "I can't speak"
@@ -18,7 +17,8 @@ class Pet:
 
 class Dog(Pet):
     def __init__(self, name, license_num):
-        Pet.__init__(self, name)
+        Pet.__init__(self, name)  #single inheritance only. See 
+                                  # w3 example
         self.hello = "woof"
 
         # i can specialize and add to subclass
