@@ -23,3 +23,11 @@ class Pizza():
 
     def get_volume(self):
         return self.compute_volume(self.height, self.radius)
+
+
+another_pizza = Pizza.compute_area(6)
+print(another_pizza)
+
+
+pizza_volume = Pizza.compute_volume(3, 4)
+print(pizza_volume)

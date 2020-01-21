@@ -4,6 +4,7 @@
 
 from loguru import logger
 
+
 def main():
     logger.info("Hello from loguru")
     logger.add("demo_{time}.log")

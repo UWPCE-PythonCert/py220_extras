@@ -13,7 +13,7 @@ class PersonNotPythonic:
 
     # function to get value of age
     def get_age(self):
-        print("i did omething in a get")
+        print("i did something in a get")
         return self.age
 
     # function to set value of age
