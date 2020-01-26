@@ -12,7 +12,7 @@ class Person(Model):
     birthday = DateField()
 
     class Meta:
-        database = db # This model uses the "people.db" database.
+        database = db  # This model uses the "people.db" database.
 
 
 class Pet(Model):
@@ -21,35 +21,43 @@ class Pet(Model):
     animal_type = CharField()
 
     class Meta:
-        database = db # this model uses the "people.db" database
+        database = db  # this model uses the "people.db" database
 
 
 def create_tables(database):
     database.create_tables([Person, Pet])
 
+
 def add_data():
     uncle_bob = Person(name='Bob', birthday=date(1960, 1, 15))
-    uncle_bob.save() # bob is now stored in the database
+    uncle_bob.save()  # bob is now stored in the database
 
-    #alt
+    # alt
     grandma = Person.create(name='Grandma', birthday=date(1935, 3, 1))
     herb = Person.create(name='Herb', birthday=date(1950, 5, 5))
+    grandma.save()
+    herb.save()
     return uncle_bob, grandma, herb
+
 
 def update_data(grandma):
     grandma.name = 'Grandma L.'
     grandma.save()  # Update grandma's name in the database.
 
+
 def set_pet_owners():
     bob_kitty = Pet.create(owner=uncle_bob, name='Kitty', animal_type='cat')
     herb_fido = Pet.create(owner=herb, name='Fido', animal_type='dog')
     herb_mittens = Pet.create(owner=herb, name='Mittens', animal_type='cat')
-    herb_mittens_jr = Pet.create(owner=herb, name='Mittens Jr', animal_type='cat')
+    herb_mittens_jr = Pet.create(
+        owner=herb, name='Mittens Jr', animal_type='cat')
     return bob_kitty, herb_fido, herb_mittens, herb_mittens_jr
+
 
 def delete_pet(herb_mittens):
 
-    herb_mittens.delete_instance() 
+    herb_mittens.delete_instance()
+
 
 def show_someones_pets():
     # 1
@@ -73,7 +81,6 @@ def show_someones_pets():
 
 
 if __name__ == "__main__":
-    #remove_db()
     db.connect()
     create_tables(db)
     uncle_bob, grandma, herb = add_data()
@@ -82,5 +89,3 @@ if __name__ == "__main__":
     delete_pet(herb_mittens)
     show_someones_pets()
     db.close()
-
-

@@ -1,5 +1,6 @@
 import math
 
+
 class Pizza():
     def __init__(self, radius, height):
         self.radius = radius
@@ -19,7 +20,6 @@ class Pizza():
            not bound to an object, but to a class"""
 
         return height * cls.compute_area(radius)
-
 
     def get_volume(self):
         return self.compute_volume(self.height, self.radius)
