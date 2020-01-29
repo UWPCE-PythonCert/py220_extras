@@ -2,10 +2,9 @@
 map, filter and reduce
 
 """
-# import pytest
 
 
-def test_map():
+def test_map_alt1():
     # apply an operation to each member of a sequence
 
     items = [1, 2, 3, 4, 5]
@@ -19,6 +18,9 @@ def test_map():
 
     # OR:
 
+
+def test_map_alt2():
+
     items = [1, 2, 3, 4, 5]
 
     def sqr(x):
@@ -28,8 +30,17 @@ def test_map():
 
     assert squared == [1, 4, 9, 16, 25]
 
+    # OR
+
+    squared = map(sqr, items)
+
+    assert next(squared) == 1
+    assert next(squared) == 4
+
     # -------------------------------------------------------------------------
 
+
+def test_map_alt3():
     # how about:
     items = [1, 2, 3, 4, 5]
     squared = list(map((lambda x: x ** 2), items))
@@ -41,8 +52,26 @@ def test_map():
 
     # -------------------------------------------------------------------------
 
+    def test_pow_two_gen(max=0):
+        n = 0
+        while n < max:
+            yield 2 ** n
+            n += 1
+
+    pows = test_pow_two_gen(10)
+    powered = next(pows)
+    assert powered == 1
+    powered = next(pows)
+    assert powered == 2
+    powered = next(pows)
+    assert powered == 4
+
+    # -------------------------------------------------------------------------
+
     # cool stuff:
 
+
+def test_cool():
     def square(x):
         return x ** 2
 
@@ -63,12 +92,18 @@ def test_map():
 
     # using multiple sequence parameters in parallel
 
+
+def test_multiple_parms():
+
     assert pow(2, 10) == 1024
     assert pow(3, 11) == 177147
     assert pow(4, 12) == 16777216
     assert list(map(pow, [2, 3, 4], [10, 11, 12])) == [1024, 177147, 16777216]
 
     # -------------------------------------------------------------------------
+
+
+def test_two_lists():
 
     from operator import add
 
@@ -89,6 +124,9 @@ def test_map():
 
     # An identity function takes a single argument and returns it unchanged:
 
+
+def test_id_func():
+
     x = 1
 
     def func(x):
@@ -99,6 +137,9 @@ def test_map():
     assert lambda x: x == x
 
     # -------------------------------------------------------------------------
+
+
+def test_proc_new_tuples():
 
     m = [1, 2, 3]
     n = [1, 4, 9]
@@ -112,6 +153,9 @@ def test_map():
     assert list(zip(m, n)) == [(1, 1), (2, 4), (3, 9)]
 
     # -------------------------------------------------------------------------
+
+
+def test_zip_longest():
 
     m = [1, 2, 3]
     n = [1, 4, 9, 10]
@@ -191,9 +235,3 @@ def test_filter():
     assert [x for x in a if x in b] == [2, 3, 5, 7]
 
     # -------------------------------------------------------------------------
-
-
-if __name__ == "__main__":
-    test_map()
-    test_reduce()
-    test_filter()

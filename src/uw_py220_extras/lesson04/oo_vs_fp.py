@@ -4,16 +4,17 @@
 demo OO vs FP
 """
 
+
 class Employee:
     def __init__(self, name, salary):
         self.name = name
         self.salary = salary
- 
+
     def change_salary(self, amt):
-       self.salary = self.salary + amt
- 
+        self.salary = self.salary + amt
+
     def describe(self):
-       print(f"oo {self.name} makes {self.salary}")
+        print(f"oo {self.name} makes {self.salary}")
 
 
 def oo(employees):
@@ -23,7 +24,12 @@ def oo(employees):
         happier_employee.describe()
 
 
-def fp1(employees, adjustment):    
+def fp(emps):
+    happies = fp1(emps, adjust)
+    fp2(happies)
+
+
+def fp1(employees, adjustment):
     happier_employees = []
     for employee in employees:
         happier_employees.append((employee[0], adjustment(employee[1], 200)))
@@ -38,14 +44,10 @@ def fp2(employees):
 def adjust(value, by):
     return value * by
 
+
 if __name__ == "__main__":
 
-    emps = [
-        ("andy", 34000),
-        ("fred", 75000),
-    ]
+    emps = [("andy", 34000), ("fred", 75000)]
 
     oo(emps)
-
-    happies = fp1(emps, adjust)
-    fp2(happies)
+    fp(emps)
