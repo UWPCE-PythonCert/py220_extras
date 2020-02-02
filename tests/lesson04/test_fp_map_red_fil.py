@@ -163,6 +163,7 @@ def test_zip_longest():
     assert list(zip(m, n)) == [(1, 1), (2, 4), (3, 9)]  # !!!!
 
     # perhaps use
+    output = []
 
     from itertools import zip_longest
 
