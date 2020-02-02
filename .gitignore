@@ -50,3 +50,6 @@ MANIFEST
 .venv*/
 .spyproject/*
 .mypy_cache/*
+*.wpr
+*.wpu
+*.db/
