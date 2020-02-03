@@ -2,7 +2,7 @@ from datetime import date
 import os
 from peewee import *
 
-#<F3>os.remove("people.db")
+#os.remove("people.db")
 
 db = SqliteDatabase('people.db')
 
