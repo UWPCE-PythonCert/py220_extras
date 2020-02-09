@@ -8,6 +8,8 @@ Lately it has been receiving more use than ever, and users are experiencing incr
 
 Your job is to diagnose and fix the poor performance. And you will need to use an evidence-based approach, using timing, profiling, and any other tools you may need. You will need to document this as you go, and submit this documentation with your assignment.
 
+All code is in lesson06 in this repo.
+
 ## Important constraints
 Many, many teams use this program. So many in fact, that no-one knows who uses it. This means that you must not change the way the program is called in any way at all, so that you don't break dependencies.
 
@@ -28,10 +30,10 @@ Unfortunately, this includes the csv files that the program creates, as some peo
 1. Show evidence of the performance you are able to obtain. Explain why this works.
 
 ## Part 3
-1. If you could rewrite the API for calc, how would you do this, and reimplement the code.
+1. If you could rewrite the API for calc, how would you do this, and re-implement the code.
 1. Submit new_perf.py that shows this, along with evidence of the performance improvements you made.
 
 
 # Your submission
-ALl code should score at least 9/10 when linted. Inlcude tests if you wish. Provide a document that describes the before and after perfoamce as described above for all 3 parts.
+All code should score at least 9/10 when linted. Include tests if you wish. Provide a document that describes the before and after performance as described above for all 3 parts.
 
