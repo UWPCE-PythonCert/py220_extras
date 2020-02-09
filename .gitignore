@@ -52,5 +52,6 @@ MANIFEST
 .mypy_cache/*
 *.wpr
 *.wpu
-*.db/
+*.db
 *.sublime-workspace
+*.csv
