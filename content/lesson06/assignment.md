@@ -8,7 +8,7 @@ Lately it has been receiving more use than ever, and users are experiencing incr
 
 Your job is to diagnose and fix the poor performance. And you will need to use an evidence-based approach, using timing, profiling, and any other tools you may need. You will need to document this as you go, and submit this documentation with your assignment.
 
-All code is in lesson06 in this repo.
+All code is in lesson06_assignment in this repo.
 
 ## Important constraints
 Many, many teams use this program. So many in fact, that no-one knows who uses it. This means that you must not change the way the program is called in any way at all, so that you don't break dependencies.
