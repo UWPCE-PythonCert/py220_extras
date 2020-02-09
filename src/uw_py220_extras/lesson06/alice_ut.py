@@ -1,6 +1,6 @@
 import functools
 import time
-import sys
+
 
 def timer(func):
     @functools.wraps(func)
@@ -11,6 +11,7 @@ def timer(func):
         run_time = end_time - start_time
         print(f"Ran {func.__name__!r} in {run_time:.4f} secs")
         return value
+
     return wrapper_timer
 
 
