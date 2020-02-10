@@ -28,7 +28,7 @@ class Tracks(Resource):
 
 
 class Employees_Name(Resource):
-    def get(self, employee_id):
+    def get(self, employee_id: int):
         conn = db_connect.connect()
         query = conn.execute(
             "select * from employees where EmployeeId =%d " % int(employee_id)
@@ -53,4 +53,4 @@ if __name__ == "__main__":
 
     app.run(port="5002")
 
-    db.dispose()
+    db_connect.dispose()

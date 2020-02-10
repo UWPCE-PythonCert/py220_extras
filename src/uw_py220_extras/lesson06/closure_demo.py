@@ -38,7 +38,8 @@ sub_logger(20, 10)
 """
     Closures:
     We must have a nested function (function inside a function).
-    The nested function must refer to a value defined in the enclosing function.
+    The nested function must refer to a value defined in the enclosing
+    function.
     The enclosing function must return the nested function.
 
     Closures highlight the idea of "doing something" (rather than a thing;
