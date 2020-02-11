@@ -15,7 +15,7 @@ Many, many teams use this program. So many in fact, that no-one knows who uses i
 
 Unfortunately, this includes the csv files that the program creates, as some people use these without running the program at all.
 
-However, you can change the internals of the calc function. The lines you may change are noted with comments in the program.
+However, you can change the internals of the calc function, and anything to do with fibo and save_it (as long as the format of the csv files and their names are not changed). The lines within calc that you may change are noted with comments in the program.
 
 ## What you must do
 1. For the first part of this assignment you must only use poor_pref.py and any code you may chose to write.

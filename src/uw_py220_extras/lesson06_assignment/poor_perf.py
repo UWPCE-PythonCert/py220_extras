@@ -18,6 +18,7 @@ def save_it(alist, name):
 
 def calc(write=False, ranges=(25, 35, 20, 42)):
     # you can only change code between this line....
+    # and within fibo and save_it
     a = [fibo(i) for i in range(ranges[0])]
     if write:
         save_it(a, "a.csv")
@@ -32,6 +33,7 @@ def calc(write=False, ranges=(25, 35, 20, 42)):
         save_it(d, "d.csv")
 
     # and this line
+
 
 if __name__ == "__main__":
     calc(True, (24, 34, 21, 42))
