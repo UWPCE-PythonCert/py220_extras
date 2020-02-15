@@ -14,8 +14,4 @@ def test_app():
 
     app.main()
 
-    assert output == [
-         'First: ',
-         'Second: ',
-         'The result is 5',
-    ]
+    assert output == ["First: ", "Second: ", "The result is 5"]

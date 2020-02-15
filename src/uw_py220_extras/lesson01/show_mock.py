@@ -8,5 +8,5 @@ class UnixFS:
 
 
 def test_unix_fs(mocker):
-    mocker.patch('os.remove')
-    UnixFS.rm('file')
+    mocker.patch("os.remove")
+    UnixFS.rm("file")
