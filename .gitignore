@@ -45,7 +45,6 @@ docs/_rst/*
 docs/_build/*
 cover/*
 MANIFEST
-
 # Per-project virtualenvs
 .venv*/
 .spyproject/*
@@ -54,4 +53,5 @@ MANIFEST
 *.wpu
 *.db
 *.sublime-workspace
+*.txt
 *.csv
