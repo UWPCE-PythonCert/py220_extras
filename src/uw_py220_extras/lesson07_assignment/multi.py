@@ -13,6 +13,7 @@ def time_me(func):
         run_time = end_time - start_time
         print(f"Ran {func.__name__!r} in {run_time:.4f} secs")
         return value
+
     return wrapper_timer
 
 
@@ -59,7 +60,7 @@ def save_serial(results, header, footer):
     for result_set in results:
         for file in result_set:
             counter += 1
-            with open('res'+str(counter)+'.txt', 'w') as csvfile:
+            with open('res' + str(counter) + '.txt', 'w') as csvfile:
                 writer = csv.writer(csvfile)
                 writer.writerow([header, file, footer])
 
