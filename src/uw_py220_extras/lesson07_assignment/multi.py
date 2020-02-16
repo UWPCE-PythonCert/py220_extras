@@ -38,13 +38,11 @@ def calc_for_parallel(one_range):
 
 @time_me
 def do_parallel(runs):
-    # experiment - make len(ranges)
     size = len(runs)
-    results = []
+    # results = []
     with Pool(size) as p:
         [results] = [p.map(calc_for_parallel, runs)]
     return results
-    # print_it()
 
 
 @time_me
@@ -53,7 +51,6 @@ def do_serial(runs):
     results.append(calc_for_serial(runs))
     [results] = results
     return results
-    # print_it()
 
 
 @time_me
@@ -80,10 +77,7 @@ def main():
     for number_set in ranges:
         parallel.append(do_parallel(number_set))
         serial.append(do_serial(number_set))
-        # add functionality for serial and parallel save to csv functions.
-        # For parallel saves use threads, async and Pools you know (but not one
-        # already used in this
-        # program. Make these big files!
+
     header = "h" * 100000000
     footer = "f" * 100000000
 
@@ -91,12 +85,6 @@ def main():
     serial = serial[0]
     save_serial(serial, header, footer)
     save_parallel(parallel, header, footer)
-    # this?
-    # explain the time difference between the two approaches
-    # explain why the two following functions swap fastest time between the
-    # first and subsequent number_sets
-    # What is any impact does changing Pool(size) to different number have?
-    # Why?
 
 
 if __name__ == "__main__":

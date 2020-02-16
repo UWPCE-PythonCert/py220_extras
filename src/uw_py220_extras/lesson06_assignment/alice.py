@@ -1,8 +1,6 @@
 """
 performance analysis
 """
-import csv
-
 
 def fibo(n):
     if n <= 1:
