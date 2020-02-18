@@ -55,3 +55,4 @@ MANIFEST
 *.sublime-workspace
 *.txt
 *.csv
+venv/*
