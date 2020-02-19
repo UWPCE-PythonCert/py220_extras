@@ -32,7 +32,7 @@ All code is in lesson07_assignment in this repo.
     - What is the impact of changing Pool(size) to different values? Why? Does it even make a difference? Why?
 
 1. Then, write two more functions, like parallel, and following it's pattern
-, that  use other ways to attempt the work in parallel. Answer the questions
+, that use other ways to attempt the work in parallel. Answer the questions
  in 2 above, but comparing serial and parallel to your two new functions.
 1. Add a function that attempt to write the csv files in parallel. Compare
  your parallel approach to the save_serial approach. There is a function
