@@ -15,9 +15,8 @@ loop = asyncio.get_event_loop()
 loop.create_task(say('first hello', 2))
 loop.create_task(say('second hello', 1))
 loop.create_task(say('third hello', 4))
-loop.create_task(stop_after(loop, 3))
+loop.create_task(stop_after(loop, 10))
 
 
 loop.run_forever()
 loop.close()
-
