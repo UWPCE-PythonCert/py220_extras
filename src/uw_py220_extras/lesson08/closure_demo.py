@@ -6,15 +6,20 @@ logging.basicConfig(filename='example.log', level=logging.INFO)
 
 
 def logger(func):
+    b = "from outer"
+
     def log_func(*args):
         logging.info(
             'Running "{}" with arguments {}'.format(func.__name__, args))
         print(func(*args))
+        print(b)
     # Necessary for closure to work (returning WITHOUT parenthesis) 
     return log_func
 
+
 def add(x, y):
     return x+y
+
 
 def sub(x, y):
     return x-y
@@ -29,13 +34,3 @@ sub_logger(10, 5)
 sub_logger(20, 10)
 
 
-"""
-    Closures:
-    We must have a nested function (function inside a function).
-    The nested function must refer to a value defined in the enclosing function.
-    The enclosing function must return the nested function.
-
-    Closures highlight the idea of "doing something" (rather than a thing;
-    that is, using a class)
-
-"""

@@ -4,6 +4,7 @@ decorator ex
 
 from loguru import logger
 
+
 def log_me(func):
     def inner(a,b):
         logger.info(f"{__name__} calculated with {a}, {b}")
@@ -11,9 +12,11 @@ def log_me(func):
         
     return inner
 
+
 @log_me
 def calculate_amount(premium, interest):
     return premium * interest
+
 
 amount = calculate_amount(120, 1.10)
 print(f"\nAmount is {amount}")

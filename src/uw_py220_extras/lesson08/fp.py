@@ -1,12 +1,3 @@
-"""
-* Closure
-* Scope
-* Curry
-* Arity
-* Functional Composition
-* Itertools
-
-"""
 from pymonad import curry
 
 @curry
@@ -23,13 +14,3 @@ db_connect_pg("fred", "456")
 db_connect_mysql = db_connect("mysql")
 
 db_connect_mysql("x", "y")
-
-
-"""
-state global vs local
-
-Closures is a cool CS term for what is really just defining functions
- on the fly with some saved state.
- currying is a special case of closures
- """
-

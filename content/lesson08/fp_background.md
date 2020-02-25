@@ -54,8 +54,7 @@ more complex data structures that are immutable. Strings are also immutable of c
 ---
 
 Functional programs don't rely on loops and the associated overhead of tracking the state of
-loops. Instead, functional programs try to rely on the much simpler (computationally, not conceptually) approach of recursive functions. BTW, to understand recursion fully, you first have to first understand recursion.
-
+loops. Instead, functional programs try to rely on the much simpler (computationally, not conceptually) approach of recursive functions.
 ---
 
 ```
@@ -102,6 +101,20 @@ this end, we should always use the with statement to encapsulate stateful file o
 well-defined scope.
 
 ---
+Closure
+=======
+
+"""
+    Closures:
+    We must have a nested function (function inside a function).
+    The nested function must refer to a value defined in the enclosing function.
+    The enclosing function must return the nested function.
+
+    Closures highlight the idea of "doing something" (rather than a thing;
+    that is, using a class)
+
+"""
+
 
 Currying
 ========
