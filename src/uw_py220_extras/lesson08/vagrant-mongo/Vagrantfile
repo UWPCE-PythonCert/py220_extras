@@ -1,0 +1,23 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+  config.vm.provider "docker"
+  config.vm.box = "tknerr/baseimage-ubuntu-18.04"
+  config.vm.network "forwarded_port", guest: 3000, host: 3000
+  config.vm.network "forwarded_port", guest: 27017, host: 27017
+  config.vm.provision "shell", inline: <<-SHELL
+     export DEBIAN_FRONTEND=noninteractive
+     apt-get update
+     apt-get install -y dialog apt-utils
+     apt-get install -y gnupg
+     apt-get install -y wget
+     apt-get install -y apache2
+     wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add -
+     echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.2 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-4.2.list
+     apt-get update
+     apt-get install -y mongodb-org
+     sudo mkdir -p /data/db
+     # run with vagrant ssh -- -t 'sudo mongod --bind_ip_all &'
+  SHELL
+end
