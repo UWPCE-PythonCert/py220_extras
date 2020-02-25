@@ -56,3 +56,4 @@ MANIFEST
 *.txt
 *.csv
 venv/*
+.vagrant/*
