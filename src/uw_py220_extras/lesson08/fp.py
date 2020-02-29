@@ -1,7 +1,7 @@
 from pymonad import curry
 
 @curry
-def db_connect(dbname, user, password):
+def db_connect(dbname="db2", user, password):
     # long drawn out code for connection goes here
     print(f"connected to {dbname} with {user} using {password}")
 
