@@ -52,7 +52,7 @@ class MongoDBConnectionManager:
 
 
 # connecting with a localhost
-with MongoDBConnectionManager("localhost", "27017") as mongo:
+with MongoDBConnectionManager("localhost", 27017) as mongo:
     collection = mongo.connection.SampleDb.test
     data = collection.find({"_id": 1})
     print(data.get("name"))

@@ -2,10 +2,10 @@
 class MultiBases(type):
     # overriding __new__ method
     def __new__(cls, clsname, bases, clsdict):
-        # if no of base classes is greator than 1
+        # if no of base classes is greater than 1
         # raise error
         if len(bases) > 1:
-            raise TypeError("Inherited multiple base classes!!!")
+            raise TypeError("\nInherited multiple base classes!!!\n")
 
         # else execute __new__ method of super class, ie.
         # call __init__ of type class
@@ -30,8 +30,8 @@ class B(Base):
 
 
 # This will raise an error!
-# class C(A, B):
-#    pass
+class C(A, B):
+    pass
 
 
 # This metaclass adds a 'hello' method to classes that use the metaclass
@@ -62,7 +62,8 @@ class TryHello(object, metaclass=HelloMeta):
         self.hello()
 
 
-# Create an instance of the metaclass. It should automatically have a hello method
+# Create an instance of the metaclass. It should automatically have a
+# hello method
 # even though one is not defined manually in the class
 # in other words, it is added for us by the metaclass
 greeter = TryHello()
