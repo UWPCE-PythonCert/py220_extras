@@ -26,3 +26,9 @@ https://www.geeksforgeeks.org/python-call-function-from-another-function/
 
 https://treyhunner.com/2020/01/passing-functions-as-arguments/
 
+## async
+can we take a few minutes to go over the asyncio module again,
+particularly how to handle return values from functions running in
+the event loop?
+
+https://realpython.com/async-io-python/
