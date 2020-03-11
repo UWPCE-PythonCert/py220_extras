@@ -1,19 +1,20 @@
-# conda install pandas
+# conda install pandas / pip install pandas
 # https://pandas.pydata.org/pandas-docs/stable/getting_started/10min.html
 # https://www.datacamp.com/community/blog/python-pandas-cheat-sheet
+# https://towardsdatascience.com/a-guide-to-pandas-and-matplotlib-for-data-exploration-56fad95f951c
 
 import pandas as pd
 
 pd.options.display.max_columns = None
 
 data = pd.read_csv("breastCancerDataReducedDimensions.csv")
-
+print(data.head())
 q3_gte_13 = data[data.radius_mean.ge(13)]
 q3_gte_13.to_csv(r'q3_gte_13.csv')
 
 q4_gte_18 = data[data.texture_mean.ge(18)]
 q4_gte_18.to_csv(r'q4_gte_18.csv')
-
+17.9
 q5_gte_85 = data[data.perimeter_mean.ge(85)]
 q5_gte_85.to_csv(r'q5_gte_85.csv')
 
